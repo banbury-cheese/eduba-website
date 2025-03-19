@@ -1,0 +1,360 @@
+@import "tailwindcss";
+@import "./breakpoints.scss";
+
+main {
+  @apply block;
+}
+
+.heroSection {
+  @apply relative h-screen w-screen;
+  .header {
+    @apply flex justify-between items-center m-2 p-1 h-10;
+    @include media("<tablet") {
+      @apply flex gap-5 items-start;
+    }
+    .edubaLogo {
+      @apply h-full;
+
+      @include media("<tablet") {
+        @apply h-full w-[40%];
+      }
+      svg {
+        @apply h-full w-full;
+      }
+    }
+    .menu {
+      @apply flex gap-10 items-center justify-center;
+      @include media("<tablet") {
+        @apply flex gap-5;
+      }
+      .menuButton {
+        @apply flex items-center gap-2 h-8;
+        // border: var(--charcoal) 1px solid;
+        @include media("<tablet") {
+          @apply h-6;
+        }
+
+        &__logo {
+          @apply h-full;
+          div {
+            @apply h-full w-fit;
+
+            svg {
+              @apply h-full w-fit;
+            }
+          }
+        }
+        &__content {
+          @apply flex flex-col items-start;
+          @include media("<tablet") {
+            @apply hidden;
+          }
+          font-size: 12px;
+          &-title {
+            @apply font-bold;
+          }
+          &-desc {
+            font-family: Bookish;
+            color: var(--grey);
+          }
+        }
+      }
+
+      .launchScribe {
+        @apply h-7;
+        @include media("<tablet") {
+          @apply h-6;
+        }
+      }
+      .launchGenUI {
+        @apply h-7;
+        @include media("<tablet") {
+          @apply h-6;
+        }
+      }
+      .bookDemo {
+        @include media(">tablet") {
+          @apply rounded-sm h-10 p-1 px-2 gap-3;
+          background-color: var(--red);
+          border: 1px solid var(--charcoal);
+          .menuButton__logo {
+            @apply h-7;
+          }
+          .menuButton__content-title {
+            @apply mt-0.5;
+            color: var(--white);
+          }
+
+          .menuButton__content-desc {
+            @apply -mt-0.5;
+            color: var(--skin);
+          }
+        }
+      }
+    }
+  }
+  .heroText {
+    // @apply hidden;
+    @apply absolute top-[15vh] left-[2vw];
+    font-family: "Bookish", sans-serif;
+    font-size: 80px;
+    @include media("<tablet") {
+      @apply top-[20vh] left-[5vw];
+      font-size: 8vw;
+    }
+    span {
+      font-style: italic;
+      color: var(--orange);
+    }
+  }
+  .heroDemoVideo {
+    @apply absolute top-[52vh] right-[2vw] w-[50%];
+
+    @include media("<tablet") {
+      @apply top-[48vh] w-[90%];
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      font-size: 8vw;
+    }
+
+    &__img {
+      @apply relative w-full h-full rounded-sm overflow-hidden z-10 cursor-pointer;
+    }
+
+    &__shadow {
+      @apply absolute top-[10px] left-[10px] rounded-sm w-full h-full bg-[var(--orange)] z-[2];
+    }
+
+    &__bookDemo {
+      @apply absolute -bottom-[20px] right-[10px] w-40 rounded-sm z-[22] cursor-pointer;
+      svg {
+        @apply h-fit w-full;
+      }
+    }
+  }
+}
+
+.sectionTag {
+  @apply relative flex justify-center gap-2 items-center w-fit;
+  @include media("<tablet") {
+    @apply gap-1;
+  }
+  &__circle {
+    @apply w-1.5 h-1.5 rounded-full bg-[var(--orange)];
+    animation: blink 1s infinite;
+    @include media("<tablet") {
+      @apply w-1 h-1;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+  }
+  &__text {
+    @apply top-[10px] left-[20px] uppercase font-bold text-[var(--orange)] text-xs;
+    font-family: "Quattro", sans-serif;
+    @include media("<tablet") {
+      font-size: 9px;
+    }
+  }
+}
+
+.aboutUs {
+  @apply relative h-screen w-screen px-8 py-3;
+
+  @include media("<tablet") {
+    @apply px-4 py-3 h-fit;
+  }
+
+  &__body {
+    font-family: "Bookish", sans-serif;
+    font-size: 35px;
+    @include media("<tablet") {
+      font-size: 18px;
+    }
+  }
+  &__cards {
+    @apply mt-3 flex w-full gap-5 justify-between rounded-sm p-2 text-xs;
+    color: var(--white);
+    @include media("<tablet") {
+      @apply flex flex-col gap-5;
+    }
+    // border: #707070 1px solid;
+  }
+  &__card {
+    @apply flex flex-col gap-4 bg-[var(--red)] rounded-sm items-center h-full gap-2 px-4 py-5;
+    &-title {
+      font-family: "Bookish";
+      font-weight: 800;
+      font-size: 25px;
+      @include media("<tablet") {
+        font-size: 20px;
+      }
+    }
+    &-desc {
+      color: var(--skin);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 100;
+      @include media("<tablet") {
+        font-size: 12px;
+      }
+    }
+    &-buttons {
+      @apply flex gap-5 items-center justify-center;
+    }
+    &-button {
+      @apply bg-[var(--orange)] cursor-pointer rounded-md py-2 px-5 transition-all duration-200;
+      &:hover {
+        @apply bg-[var(--white)] text-[var(--red)];
+      }
+      &:active {
+        @apply scale-99;
+      }
+      color: var(--white);
+      font-family: "Bookish";
+      @include media("<tablet") {
+        font-size: 12px;
+      }
+      border: var(--charcoal) 0.5px solid;
+    }
+  }
+}
+
+.blogs {
+  @apply relative h-screen w-screen px-8 py-3;
+  @include media("<tablet") {
+    @apply mt-15 h-fit mb-20;
+  }
+
+  .blogs__cards {
+    @apply flex gap-5 mt-4 overflow-x-auto whitespace-nowrap;
+    scroll-snap-type: x mandatory;
+
+    .blogCard {
+      @apply bg-white flex justify-between flex-col gap-3 h-[40vh] w-[35vh] p-2 flex-shrink-0;
+      scroll-snap-align: start;
+      border: #707070 1px solid;
+      text-wrap: auto;
+
+      h3 {
+        @apply w-full;
+        // flex-grow: 1;
+        font-family: Bookish;
+        font-size: 20px;
+        color: var(--red);
+        // @apply hidden;
+      }
+      p {
+        flex-grow: 1;
+        font-family: "Avenir";
+        font-weight: 100;
+        color: #264350;
+        font-size: 12px;
+      }
+      small {
+        align-self: flex-start;
+        font-family: "Avenir";
+        font-weight: 200;
+        font-style: italic;
+        color: #264350;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.team {
+  @apply relative h-screen w-screen px-8 py-3;
+  // @include media("<tablet") {
+  @apply hidden;
+  // }
+  .team__cards {
+    @apply mt-4 grid grid-cols-4 gap-4;
+    .teamCard {
+      @apply bg-white p-2;
+      border: #707070 1px solid;
+      @apply aspect-square;
+    }
+  }
+}
+
+.links {
+  @include media("<tablet") {
+    @apply hidden;
+  }
+  @apply bg-[var(--white)] w-screen h-fit flex items-center justify-center mb-20;
+  svg {
+    @apply h-fit w-[90%];
+  }
+}
+
+.footer {
+  @apply flex justify-between items-start px-8 py-12 bg-white text-[var(--charcoal)];
+
+  @include media("<tablet") {
+    @apply flex-col gap-5;
+  }
+
+  &__left {
+    @apply flex flex-col gap-4;
+
+    &-top {
+      @apply flex gap-5;
+
+      &__edubaLogo {
+        @apply h-8 w-auto;
+
+        svg {
+          @apply h-full w-auto;
+        }
+      }
+    }
+
+    &-socials {
+      @apply flex gap-4 items-end justify-center;
+
+      &__linkedin,
+      &__insta,
+      &__email {
+        @apply h-4 w-4 cursor-pointer;
+
+        svg {
+          @apply h-full w-full;
+        }
+      }
+    }
+
+    &-bottom {
+      @apply text-xs text-[var(--charcoal)];
+
+      font-family: "Avenir";
+      font-weight: 200;
+      font-style: italic;
+    }
+  }
+
+  &__right {
+    @apply text-xs w-[25%];
+
+    @include media("<tablet") {
+      @apply w-full;
+    }
+
+    b {
+      @apply font-bold;
+    }
+
+    a {
+      @apply italic underline;
+      font-weight: 300;
+    }
+  }
+}
