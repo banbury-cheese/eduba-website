@@ -25,7 +25,7 @@ const AboutUsCards = () => {
     {
       title: "Workshops & Labs",
       description:
-        "Interactive spaces where educators experiment with Al in real teaching contexts. These aren&apos;t just training sessions-they&apos;re living laboratories where teachers directly shape how Al serves their educational objectives.",
+        "Interactive spaces where educators experiment with Al in real teaching contexts. These arent just training sessions-they are living laboratories where teachers directly shape how Al serves their educational objectives.",
       buttons: [
         { text: "Join a Workshop", onClick: () => alert("Coming Soon!") },
       ],
@@ -53,7 +53,7 @@ const AboutUsCards = () => {
     {
       title: "Teacher-Led Governance",
       description:
-        "Education technology should answer to educators. We&apos;ve developed governance models that give teachers real decision-making power in how Al is implemented in their schools and institutions.",
+        "Education technology should answer to educators. We have developed governance models that give teachers real decision-making power in how Al is implemented in their schools and institutions.",
       buttons: [
         {
           text: "Learn More",
