@@ -26,12 +26,12 @@ export default function Home() {
         <HeroDemo />
       </section>
       <section className="aboutUs">
-        <SectionTag text={"What we're building"} />
+        <SectionTag text={"What we&apos;re building"} />
         <div className="aboutUs__body">
           We’re starting with AI because it’s changing education faster than any
           tool since writing itself. Like those first teachers in their houses
           of tablets, you understand something deeper about learning than any
-          algorithm or app. Here's our three part approach:
+          algorithm or app. Here&apos;s our three part approach:
         </div>
         <AboutUsCards />
       </section>
