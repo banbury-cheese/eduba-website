@@ -95,20 +95,26 @@ main {
   }
   .heroText {
     // @apply hidden;
-    @apply absolute top-[15vh] left-[2vw];
+    @apply absolute top-[15vh] left-[2vw] opacity-0;
     font-family: "Bookish", sans-serif;
     font-size: 85px;
     @include media("<tablet") {
       @apply top-[20vh] left-[5vw];
       font-size: 8vw;
     }
+    // div {
+    //   opacity: 0;
+    // }
     span {
       font-style: italic;
       color: var(--orange);
+      // div {
+      //   opacity: 0;
+      // }
     }
   }
   .heroDemoVideo {
-    @apply absolute top-[52vh] right-[2vw] w-[50%];
+    @apply absolute top-[52vh] right-[2vw] w-[50%] opacity-0;
 
     @include media("<tablet") {
       @apply top-[48vh] w-[90%];
@@ -243,10 +249,14 @@ main {
     scroll-snap-type: x mandatory;
 
     .blogCard {
-      @apply bg-white flex justify-between flex-col gap-3 h-[40vh] w-[35vh] p-2 flex-shrink-0;
+      @apply bg-white flex justify-between flex-col gap-3 h-[40vh] w-[35vh] p-2 flex-shrink-0 transition-all duration-200;
       scroll-snap-align: start;
       border: #707070 1px solid;
       text-wrap: auto;
+
+      &:hover {
+        @apply shadow-lg border-[var(--red)];
+      }
 
       h3 {
         @apply w-full;

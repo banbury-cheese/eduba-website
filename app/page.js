@@ -9,9 +9,57 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import AboutUsCards from "./components/aboutUsCards";
 import Blogs from "./components/blogs";
+import { useEffect } from "react";
+import $ from "jquery";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
+gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(SplitText);
 
 export default function Home() {
+  useEffect(() => {
+    // Reveal the hero section
+    const heroText = $(".heroText");
+
+    let heroSplitText = new SplitText(heroText, {
+      charsClass: "char",
+    });
+
+    let menuTextHoverAni = gsap
+      .timeline({
+        //  paused: true,
+        defaults: { duration: 0.5, stagger: 0.025, ease: "power1.out" },
+      })
+      .set(heroText, {
+        opacity: 1,
+      })
+      .fromTo(
+        heroSplitText.chars,
+        {
+          opacity: 0,
+          yPercent: +10,
+        },
+        {
+          yPercent: 0,
+          opacity: 1,
+        },
+        0
+      )
+      .fromTo(
+        ".heroDemoVideo",
+        {
+          opacity: 0,
+          yPercent: +10,
+        },
+        {
+          yPercent: 0,
+          opacity: 1,
+        },
+        "<1.2"
+      )
+      .timeScale(1);
+  }, []);
+
   return (
     <main>
       <div className="overlay"></div>
