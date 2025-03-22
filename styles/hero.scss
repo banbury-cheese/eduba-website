@@ -74,7 +74,7 @@ main {
       }
       .bookDemo {
         @include media(">tablet") {
-          @apply rounded-sm h-10 p-1 px-2 gap-3;
+          @apply rounded-sm h-11 p-1 px-2 gap-3;
           background-color: var(--red);
           border: 1px solid var(--charcoal);
           .menuButton__logo {
