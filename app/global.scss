@@ -2,7 +2,6 @@
 @import "../styles/hero.scss";
 @import "../styles/breakpoints.scss";
 
-
 @font-face {
   font-family: "Helvetica";
   font-weight: 400;
@@ -100,7 +99,6 @@ body {
   color: var(--text-color);
 }
 
-
 .h-effect {
   position: relative;
   overflow: hidden;
@@ -118,4 +116,26 @@ body {
   .word {
     // opacity: 0;
   }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000000000;
+  display: block;
+  width: auto;
+  height: auto;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  pointer-events: none;
+  grid-template-rows: auto auto;
+  background-image: url("/assets/backgroundOverlayCardboard.png");
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: 0.3;
 }

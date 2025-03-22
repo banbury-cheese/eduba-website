@@ -14,6 +14,7 @@ gsap.registerPlugin(SplitText);
 export default function Home() {
   return (
     <main>
+      <div className="overlay"></div>
       <section className="heroSection">
         <header className="header">
           <EdubaLogo />
