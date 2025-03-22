@@ -1,4 +1,30 @@
+import { useEffect } from "react";
+import $ from "jquery";
+import gsap from "gsap";
+
 const EdubaLogo = () => {
+  useEffect(() => {
+    const logoHoverAni = gsap
+      .timeline({
+        paused: true,
+      })
+      .to($(".edubaLogo").find("path"), {
+        stagger: 0.05,
+        fill: "#B13F2D",
+        ease: "power3.inOut",
+      })
+      .to($(".edubaLogo").find("path"), {
+        stagger: 0.05,
+        fill: "#264350",
+        ease: "power3.inOut",
+      });
+
+
+    $(".edubaLogo").on("mouseenter", () => {
+      logoHoverAni.restart();
+    });
+  }, []);
+
   return (
     <div className="edubaLogo">
       <svg
