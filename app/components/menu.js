@@ -33,8 +33,6 @@ const MenuButton = ({ className, title, desc, IconComponent, link }) => {
 
 const Menu = () => {
   useEffect(() => {
-    let stdDuration = 0.8;
-
     $(".menuButton").each(function () {
       var texts = $(this).find(".h-item");
       var logo = $(this).find(".blueCircle");
