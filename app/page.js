@@ -88,14 +88,76 @@ export default function Home() {
       <section className="team">
         <SectionTag text={"Meet our team"} />
         <div className="team__cards">
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
-          <div className="teamCard"></div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/jake.jpeg"
+              alt="Jake"
+              width={200}
+              height={200}
+            />
+            <h3>Jake</h3>
+            <p>The Ceo</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/david.png"
+              alt="David"
+              width={200}
+              height={200}
+            />
+            <h3>David</h3>
+            <p>The CTO</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/mo.png"
+              alt="Mo"
+              width={200}
+              height={200}
+            />
+            <h3>Mo</h3>
+            <p>The CMO</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/nick.jpeg"
+              alt="Nick"
+              width={200}
+              height={200}
+            />
+            <h3>Nick</h3>
+            <p>The COO</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/kay.png"
+              alt="Kay"
+              width={200}
+              height={200}
+            />
+            <h3>Kay</h3>
+            <p>Frontend Lead</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/jon.png"
+              alt="Jon"
+              width={200}
+              height={200}
+            />
+            <h3>Jon</h3>
+            <p>Advisor</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/claire.png"
+              alt="Claire"
+              width={200}
+              height={200}
+            />
+            <h3>Claire</h3>
+            <p>EA</p>
+          </div>
         </div>
       </section>
       <section className="footer">

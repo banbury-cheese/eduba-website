@@ -287,15 +287,75 @@ main {
 
 .team {
   @apply relative h-screen w-screen px-8 py-3;
-  // @include media("<tablet") {
-  @apply hidden;
-  // }
+  @include media("<tablet") {
+    @apply h-fit pb-10;
+  }
   .team__cards {
     @apply mt-4 grid grid-cols-4 gap-4;
+    @include media("<tablet") {
+      @apply grid-cols-2;
+    }
     .teamCard {
-      @apply bg-white p-2;
+      @apply bg-white p-2 relative aspect-square;
+      @include media("<tablet") {
+        @apply p-1;
+      }
       border: #707070 1px solid;
-      @apply aspect-square;
+      img {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      &:hover img {
+        filter: grayscale(0%);
+      }
+
+      img {
+        @apply w-full h-full object-cover;
+      }
+
+      h3,
+      p {
+        @apply font-bold absolute bottom-5 right-5 z-10 text-right;
+        font-size: 10px;
+
+        @include media("<tablet") {
+          @apply bottom-4 right-4;
+          font-size: 8px;
+          &::before {
+            @apply -inset-1;
+          }
+        }
+        &::before {
+          content: "";
+          @apply absolute -inset-2 backdrop-blur-sm -z-10;
+          background-color: var(--charcoal);
+        }
+      }
+
+      h3 {
+        @apply bottom-[43px] uppercase;
+        color: var(--white);
+        font-family: "Helvetica", sans-serif;
+        // letter-spacing: 0.05em;
+        &::before {
+          border-radius: 5px 5px 0px 0px;
+        }
+        @include media("<tablet") {
+          @apply bottom-[35px];
+        }
+      }
+
+      p {
+        @apply uppercase;
+        font-family: "Avenir", sans-serif;
+        font-weight: 100;
+        color: var(--skin);
+        letter-spacing: 0.05em;
+        &::before {
+          border-radius: 5px 0px 5px 5px;
+        }
+      }
     }
   }
 }
