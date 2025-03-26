@@ -239,9 +239,10 @@ main {
 }
 
 .blogs {
-  @apply relative h-screen w-screen px-5 py-3;
+  @apply relative h-screen w-screen px-8 py-3;
+
   @include media("<tablet") {
-    @apply mt-15 h-fit mb-20;
+    @apply mt-15 h-fit mb-20 px-5;
   }
 
   .blogs__cards {
@@ -288,7 +289,7 @@ main {
 .team {
   @apply relative h-screen w-screen px-8 py-3;
   @include media("<tablet") {
-    @apply h-fit pb-10;
+    @apply h-fit pb-10 px-5;
   }
   .team__cards {
     @apply mt-4 grid grid-cols-4 gap-4;
