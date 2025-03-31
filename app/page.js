@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <div className="teamCard">
             <Image
-              src="/assets/team-pfp/david.png"
+              src="/assets/team-pfp/david.jpg"
               alt="David"
               width={200}
               height={200}
@@ -140,7 +140,17 @@ export default function Home() {
           </div>
           <div className="teamCard">
             <Image
-              src="/assets/team-pfp/jon.png"
+              src="/assets/team-pfp/paul.jpg"
+              alt="Paul"
+              width={200}
+              height={200}
+            />
+            <h3>Paul</h3>
+            <p>The COO</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/jon.jpeg"
               alt="Jon"
               width={200}
               height={200}
