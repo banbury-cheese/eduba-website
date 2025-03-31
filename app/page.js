@@ -90,7 +90,7 @@ export default function Home() {
         <div className="team__cards">
           <div className="teamCard">
             <Image
-              src="/assets/team-pfp/jake.jpeg"
+              src="/assets/team-pfp/jake.jpg"
               alt="Jake"
               width={200}
               height={200}
