@@ -139,3 +139,44 @@ body {
   background-repeat: repeat;
   opacity: 0.4;
 }
+
+/* Custom text selection styles  */
+
+/*** Works on common browsers ***/
+::selection {
+  background-color: transparent;
+  color: var(--orange);
+  -webkit-text-decoration: underline wavy var(--orange);
+  text-decoration: underline wavy var(--orange);
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: transparent;
+  color: var(--orange);
+  -webkit-text-decoration: underline wavy var(--orange);
+  text-decoration: underline wavy var(--orange);
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: transparent;
+  color: var(--orange);
+  -webkit-text-decoration: underline wavy var(--orange);
+  text-decoration: underline wavy var(--orange);
+}
+
+::-ms-selection {
+  background-color: transparent;
+  color: var(--orange);
+  -webkit-text-decoration: underline wavy var(--orange);
+  text-decoration: underline wavy var(--orange);
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: transparent;
+  color: var(--orange);
+  -webkit-text-decoration: underline wavy var(--orange);
+  text-decoration: underline wavy var(--orange);
+}
