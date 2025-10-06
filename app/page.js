@@ -344,16 +344,7 @@ export default function Home() {
             <h3>David</h3>
             <p>The CTO</p>
           </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/mo.png"
-              alt="Mo"
-              width={200}
-              height={200}
-            />
-            <h3>Mo</h3>
-            <p>The CMO</p>
-          </div>
+    
           <div className="teamCard">
             <Image
               src="/assets/team-pfp/nick.jpeg"
@@ -383,16 +374,6 @@ export default function Home() {
             />
             <h3>Paul</h3>
             <p>The COO</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/jon.jpeg"
-              alt="Jon"
-              width={200}
-              height={200}
-            />
-            <h3>Jon</h3>
-            <p>Advisor</p>
           </div>
           <div className="teamCard">
             <Image
