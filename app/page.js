@@ -189,8 +189,8 @@ export default function Home() {
           </div>
           <p className="heroSection__subtitle">
             We teach the abstract fundamentals that matter – not just how to use
-            today&apos;s tools, but how to think critically about tomorrow&apos;s
-            technology collaborations.
+            today&apos;s tools, but how to think critically about
+            tomorrow&apos;s technology collaborations.
           </p>
           <a className="heroSection__cta" href="#approach">
             Explore Our Approach
@@ -202,12 +202,12 @@ export default function Home() {
         <div className="reality__card">
           <span className="reality__label">The Reality:</span>
           <p>
-            Everyone&apos;s teaching prompt engineering. But the real challenge isn&apos;t
-            human-to-AI interaction in isolation – it&apos;s understanding how
-            multiple humans and multiple AI systems work together. We teach the
-            critical thinking and abstract understanding needed to orchestrate
-            complex agentic workflows, regardless of which platforms emerge or
-            fade.
+            Everyone&apos;s teaching prompt engineering. But the real challenge
+            isn&apos;t human-to-AI interaction in isolation – it&apos;s
+            understanding how multiple humans and multiple AI systems work
+            together. We teach the critical thinking and abstract understanding
+            needed to orchestrate complex agentic workflows, regardless of which
+            platforms emerge or fade.
           </p>
         </div>
       </section>
@@ -216,8 +216,8 @@ export default function Home() {
         <div className="sectionHeading">
           <h2>Two Paths, One Mission</h2>
           <p>
-            Building competencies that bridge today&apos;s needs with tomorrow&apos;s
-            possibilities
+            Building competencies that bridge today&apos;s needs with
+            tomorrow&apos;s possibilities
           </p>
         </div>
         <div className="mission__cards">
@@ -256,10 +256,10 @@ export default function Home() {
         <div className="assessment__card">
           <h2>Assessment &amp; Infrastructure Tools</h2>
           <p>
-            We&apos;re piloting custom assessment solutions that measure what actually
-            matters – not just if someone can write prompts, but if they can
-            implement without burning resources. Our tools help organizations
-            understand their real readiness for agentic workflows.
+            We&apos;re piloting custom assessment solutions that measure what
+            actually matters – not just if someone can write prompts, but if
+            they can implement without burning resources. Our tools help
+            organizations understand their real readiness for agentic workflows.
           </p>
           <p>
             Working with leading organizations to develop metrics and
@@ -315,9 +315,10 @@ export default function Home() {
           ))}
         </div>
         <blockquote className="partners__quote">
-          &ldquo;The future isn&apos;t about humans versus AI, or even humans with AI. It&apos;s
-          about understanding how multiple humans and multiple AI systems
-          collaborate to create value. That&apos;s what we teach.&rdquo;
+          &ldquo;The future isn&apos;t about humans versus AI, or even humans
+          with AI. It&apos;s about understanding how multiple humans and
+          multiple AI systems collaborate to create value. That&apos;s what we
+          teach.&rdquo;
         </blockquote>
       </section>
 
@@ -344,7 +345,7 @@ export default function Home() {
             <h3>David</h3>
             <p>The CTO</p>
           </div>
-    
+
           <div className="teamCard">
             <Image
               src="/assets/team-pfp/nick.jpeg"
@@ -364,6 +365,26 @@ export default function Home() {
             />
             <h3>Kay</h3>
             <p>Frontend Lead</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/matthew.png"
+              alt="Matthew"
+              width={200}
+              height={200}
+            />
+            <h3>matthew</h3>
+            <p>CRO</p>
+          </div>
+          <div className="teamCard">
+            <Image
+              src="/assets/team-pfp/kaleb.png"
+              alt="Kaleb"
+              width={200}
+              height={200}
+            />
+            <h3>Kaleb</h3>
+            <p>Advisor</p>
           </div>
           <div className="teamCard">
             <Image
@@ -392,8 +413,9 @@ export default function Home() {
         <div className="ctaSection__content">
           <h2>Ready to Build Real Competencies?</h2>
           <p>
-            Whether you&apos;re preparing students for tomorrow&apos;s workforce or
-            transforming today&apos;s employees, let&apos;s discuss how we can help.
+            Whether you&apos;re preparing students for tomorrow&apos;s workforce
+            or transforming today&apos;s employees, let&apos;s discuss how we
+            can help.
           </p>
           <a
             className="ctaSection__button"
@@ -530,8 +552,9 @@ export default function Home() {
           </div>
         </div>
         <div className="footer__right">
-          <b>For Inquiries:</b> <br /> Have questions, ideas, or feedback? We&apos;d
-          love to hear from you. Reach us at: <br /> <a href="mailto:contact@eduba.io">contact@eduba.io</a>
+          <b>For Inquiries:</b> <br /> Have questions, ideas, or feedback?
+          We&apos;d love to hear from you. Reach us at: <br />{" "}
+          <a href="mailto:contact@eduba.io">contact@eduba.io</a>
         </div>
       </section>
     </main>
