@@ -384,7 +384,7 @@ export default function Home() {
               height={200}
             />
             <h3>Kaleb</h3>
-            <p>Advisor</p>
+            <p>Business Development</p>
           </div>
           <div className="teamCard">
             <Image
