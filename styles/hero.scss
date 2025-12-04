@@ -113,6 +113,16 @@ main {
     }
   }
 
+  &__tagline {
+    @apply uppercase text-sm font-semibold tracking-wide;
+    color: var(--orange);
+    font-family: "Quattro", sans-serif;
+
+    @include media("<tablet") {
+      @apply text-xs;
+    }
+  }
+
   .heroText {
     @apply opacity-0 max-w-3xl text-center mb-4;
     font-family: "Bookish", sans-serif;
@@ -169,19 +179,19 @@ main {
 }
 
 .reality {
-  @apply w-full px-8 py-16 flex justify-center;
+  @apply w-full px-8 py-20 flex flex-col items-center gap-6;
 
   @include media("<tablet") {
-    @apply px-5 py-12;
+    @apply px-5 py-14;
   }
 
   &__card {
-    @apply flex flex-col gap-4 max-w-4xl w-full rounded-md px-8 py-10 shadow-md;
+    @apply flex flex-col gap-5 max-w-4xl w-full rounded-md px-10 py-10 shadow-md;
     background-color: rgba(221, 211, 200, 0.4);
     border-left: 6px solid var(--orange);
 
     @include media("<tablet") {
-      @apply px-5 py-7;
+      @apply px-6 py-8 gap-4;
     }
 
     .reality__label {
@@ -557,7 +567,7 @@ main {
 }
 
 .ctaSection {
-  @apply w-full px-8 py-20 flex justify-center;
+  @apply w-full px-8 py-20 flex flex-col items-center gap-6;
   background-color: rgba(221, 211, 200, 0.35);
 
   @include media("<tablet") {
@@ -580,6 +590,17 @@ main {
     p {
       @apply text-base leading-relaxed;
       color: var(--grey);
+
+      a {
+        @apply underline;
+        color: var(--eduba-blue);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+
+        &:hover {
+          color: var(--orange);
+        }
+      }
     }
   }
 
@@ -595,6 +616,178 @@ main {
 
     &:active {
       @apply scale-95;
+    }
+  }
+}
+
+// New section styles for updated content
+.whatWeDo {
+  @apply w-full px-8 py-20;
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__grid {
+    @apply grid grid-cols-3 gap-6 max-w-6xl mx-auto;
+
+    @include media("<tablet") {
+      @apply grid-cols-1;
+    }
+  }
+}
+
+.whatWeDoCard {
+  @apply bg-white rounded-xl px-6 py-8 shadow-sm border border-solid border-[rgba(33,33,33,0.08)] flex flex-col gap-3;
+
+  h3 {
+    font-family: "Bookish", sans-serif;
+    font-size: 1.5rem;
+    color: var(--eduba-blue);
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+    color: var(--charcoal);
+  }
+}
+
+.howWeWork {
+  @apply w-full px-8 py-20;
+  background-color: rgba(247, 245, 238, 0.8);
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__content {
+    @apply flex flex-col gap-4 max-w-4xl mx-auto;
+
+    p {
+      @apply text-lg leading-relaxed;
+      color: var(--charcoal);
+
+      @include media("<tablet") {
+        @apply text-base;
+      }
+    }
+  }
+}
+
+.whoWeWorkWith {
+  @apply w-full px-8 py-20;
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__grid {
+    @apply grid grid-cols-3 gap-6 max-w-5xl mx-auto;
+
+    @include media("<tablet") {
+      @apply grid-cols-1;
+    }
+  }
+}
+
+.whoWeWorkWithCard {
+  @apply bg-white rounded-xl border border-solid border-[rgba(33,33,33,0.08)] shadow-sm p-8 flex flex-col gap-3 text-center;
+
+  h3 {
+    font-family: "Bookish", sans-serif;
+    font-size: 1.5rem;
+    color: var(--eduba-blue);
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+    color: var(--charcoal);
+  }
+}
+
+.currentWork {
+  @apply w-full px-8 py-20;
+  background-color: rgba(221, 211, 200, 0.35);
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__content {
+    @apply flex flex-col gap-4 max-w-4xl mx-auto;
+
+    p {
+      @apply text-lg leading-relaxed;
+      color: var(--charcoal);
+
+      @include media("<tablet") {
+        @apply text-base;
+      }
+    }
+  }
+}
+
+.engagements {
+  @apply w-full px-8 py-20;
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__grid {
+    @apply grid grid-cols-3 gap-6 max-w-6xl mx-auto;
+
+    @include media("<tablet") {
+      @apply grid-cols-1;
+    }
+  }
+}
+
+.engagementCard {
+  @apply bg-white rounded-xl p-8 border border-solid border-[rgba(33,33,33,0.1)] shadow-sm flex flex-col gap-4;
+
+  h3 {
+    font-family: "Bookish", sans-serif;
+    font-size: 1.5rem;
+    color: var(--eduba-blue);
+  }
+
+  &__label {
+    @apply uppercase text-xs font-semibold tracking-wide;
+    color: var(--orange);
+    font-family: "Quattro", sans-serif;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+    color: var(--charcoal);
+  }
+}
+
+.perspective {
+  @apply w-full px-8 py-20;
+  background-color: rgba(247, 245, 238, 0.8);
+
+  @include media("<tablet") {
+    @apply px-5 py-14;
+  }
+
+  &__quote {
+    @apply max-w-5xl mx-auto text-center text-xl italic leading-relaxed rounded-xl px-10 py-12 mb-6;
+    background: var(--red);
+    color: var(--white);
+
+    @include media("<tablet") {
+      @apply text-lg px-6 py-8;
+    }
+  }
+
+  &__followup {
+    @apply max-w-5xl mx-auto text-center text-lg leading-relaxed;
+    color: var(--charcoal);
+
+    @include media("<tablet") {
+      @apply text-base;
     }
   }
 }

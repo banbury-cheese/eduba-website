@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect } from "react";
 import $ from "jquery";
 import gsap from "gsap";
@@ -11,143 +10,72 @@ import Menu from "./components/menu";
 
 gsap.registerPlugin(SplitText);
 
-const missionAudience = [
+const whatWeDo = [
   {
-    title: "For Organizations",
-    subtitle: "Transform Your Workforce",
-    bullets: [
-      "Understand real implementation costs and risks",
-      "Build capabilities for agentic workflows",
-      "Assess readiness beyond basic literacy",
-      "Create sustainable augmentation strategies",
-    ],
+    title: "Build",
     description:
-      "From corporate training to military skill bridge programs, we help organizations build lasting competencies.",
+      "Multi-agent systems, data pipelines, production infrastructure. We've reduced 160-hour processes to 5 minutes. We know what real implementation looks like, including the costs vendors don't mention and the failures that don't make it into case studies.",
   },
   {
-    title: "For Education",
-    subtitle: "Prepare Tomorrow's Workforce",
-    bullets: [
-      "Curriculum that matches industry needs",
-      "Critical thinking about technology outputs",
-      "Multi-stakeholder collaboration skills",
-      "Ethics, governance, and risk assessment",
-    ],
+    title: "Teach",
     description:
-      "Working with universities and colleges to ensure graduates have the competencies employers actually need.",
+      "Abstract fundamentals that work regardless of which platforms emerge or fade. We focus on critical assessment of outputs and understanding principles rather than just procedures. When your team builds the first version themselves, they understand what they're working with.",
+  },
+  {
+    title: "Govern",
+    description:
+      "Risk assessment, policy frameworks, and ethics considerations. Our research measures psychological patterns in AI systems that most evaluation methods miss entirely. This is the human judgment that technology can't replace.",
   },
 ];
 
-const skills = [
+const whoWeWorkWith = [
   {
-    title: "Critical Assessment",
+    title: "Organizations",
     description:
-      "Knowing when outputs are wrong, misleading, or incomplete. The skill that prevents million-dollar mistakes.",
+      "Companies moving beyond pilots into production systems with actual users and actual stakes.",
   },
   {
-    title: "Agentic Orchestration",
+    title: "Education",
     description:
-      "Understanding how multiple AI agents and humans collaborate. Building on top of, not replacing, existing systems.",
+      "Universities and colleges bridging the gap between what's taught and what industry actually needs, preparing students for implementation reality.",
   },
   {
-    title: "Abstract Fundamentals",
+    title: "Research & Government",
     description:
-      "Platform-agnostic skills that work across any tool. Understanding principles, not just procedures.",
-  },
-  {
-    title: "Governance & Ethics",
-    description:
-      "Risk assessment, compliance understanding, and ethical considerations. The human judgment that technology can't replace.",
-  },
-  {
-    title: "Implementation Reality",
-    description:
-      "Understanding real costs, timelines, and limitations. Knowing what works in practice, not just theory.",
-  },
-  {
-    title: "Human-AI Collaboration",
-    description:
-      "Not just prompting, but true collaboration. Augmenting human capabilities, not replacing them.",
+      "Institutions where compliance matters, data is sensitive, and the cost of getting it wrong is high.",
   },
 ];
 
-const programs = [
+const engagements = [
   {
-    title: "Executive Reality Check",
-    label: "60-90 Minutes",
+    title: "Executive Briefing",
+    label: "60–90 minutes",
     description:
-      "Leadership needs clarity, not vendor pitches. We explain what's real, what's coming, and what decisions need to be made now. No buzzwords, just actionable insights.",
+      "A clear-eyed look at what's real, what's coming, and what decisions need to be made now.",
   },
   {
     title: "Implementation Readiness",
-    label: "Full-day Workshop",
+    label: "Full day",
     description:
-      "Before investing in new technology, understand your team's real capabilities. We assess critical thinking, risk assessment, and implementation readiness – the skills that determine success.",
+      "Before investing in new technology, understand your team's real capabilities and your organization's actual opportunities.",
   },
   {
-    title: "Agentic Workflow Design",
-    label: "2-Day Intensive",
+    title: "Technical Implementation",
+    label: "Scoped to need",
     description:
-      "Learn to orchestrate complex human-AI interactions. Work with your actual use cases to design workflows that augment, not replace, your existing capabilities.",
+      "Production systems for validated problems. We build what you've already proven matters.",
   },
   {
-    title: "Educator Workshops",
-    label: "Custom Programs",
+    title: "Educator Programs",
+    label: "Custom",
     description:
-      "Help faculty understand what skills industry actually needs. Bridge the gap between academic theory and workplace reality. Develop curriculum that prepares students for real implementation.",
+      "Helping faculty understand what skills industry actually needs and develop curriculum that prepares students for real implementation.",
   },
   {
-    title: "Student Bootcamps",
-    label: "Multi-week Programs",
+    title: "Ongoing Advisory",
+    label: "Monthly",
     description:
-      "Intensive programs that teach abstract fundamentals and critical thinking. Students learn to work with any platform, assess risks, and understand the real economics of implementation.",
-  },
-  {
-    title: "Professional Development",
-    label: "Ongoing Programs",
-    description:
-      "From military skill bridge to corporate upskilling. Build competencies that last beyond the current technology cycle. Focus on principles and judgment, not just tool usage.",
-  },
-];
-
-const approach = [
-  {
-    title: "We Teach Abstract Fundamentals",
-    description:
-      "Not tied to specific platforms. Skills that work regardless of which tools emerge or fade.",
-  },
-  {
-    title: "We Focus on Critical Thinking",
-    description:
-      "The ability to assess outputs, identify risks, and make informed decisions about technology use.",
-  },
-  {
-    title: "We Build Real Competencies",
-    description:
-      "Hands-on experience with actual workflows, real costs, and genuine implementation challenges.",
-  },
-  {
-    title: "We Bridge Education and Industry",
-    description:
-      "Translating between what organizations need and what institutions teach.",
-  },
-];
-
-const partners = [
-  {
-    title: "Universities & Colleges",
-    description:
-      "Higher education institutions looking to ensure their graduates have the competencies employers actually need.",
-  },
-  {
-    title: "Forward-Thinking Enterprises",
-    description:
-      "Companies that understand the difference between tool training and building lasting workforce capabilities.",
-  },
-  {
-    title: "Professional Services",
-    description:
-      "Consultancies and training organizations that need honest assessment and real skill development for their clients.",
+      "Strategic guidance, implementation support, and governance review on a continuing basis.",
   },
 ];
 
@@ -184,116 +112,29 @@ export default function Home() {
           <Menu />
         </header>
         <div className="heroSection__content">
+          <p className="heroSection__tagline">The faces of interface</p>
           <div className="heroText">
-            Building Workforce Competencies for Agentic Workflows
+            Understanding How Humans and AI Systems Work Together
           </div>
           <p className="heroSection__subtitle">
-            We teach the abstract fundamentals that matter – not just how to use
-            today&apos;s tools, but how to think critically about
-            tomorrow&apos;s technology collaborations.
+            We help organizations develop the critical thinking needed to
+            orchestrate complex workflows, implement real systems, and govern
+            what gets built.
           </p>
-          <a className="heroSection__cta" href="#approach">
-            Explore Our Approach
+          <a className="heroSection__cta" href="mailto:theceo@eduba.io">
+            Start a Conversation
           </a>
         </div>
       </section>
 
-      <section className="reality" id="reality">
-        <div className="reality__card">
-          <span className="reality__label">The Reality:</span>
-          <p>
-            Everyone&apos;s teaching prompt engineering. But the real challenge
-            isn&apos;t human-to-AI interaction in isolation – it&apos;s
-            understanding how multiple humans and multiple AI systems work
-            together. We teach the critical thinking and abstract understanding
-            needed to orchestrate complex agentic workflows, regardless of which
-            platforms emerge or fade.
-          </p>
-        </div>
-      </section>
-
-      <section className="mission" id="mission">
+      <section className="whatWeDo" id="what-we-do">
+        <SectionTag text={"What We Do"} />
         <div className="sectionHeading">
-          <h2>Two Paths, One Mission</h2>
-          <p>
-            Building competencies that bridge today&apos;s needs with
-            tomorrow&apos;s possibilities
-          </p>
+          <h2>Build. Teach. Govern.</h2>
         </div>
-        <div className="mission__cards">
-          {missionAudience.map((audience) => (
-            <div className="missionCard" key={audience.title}>
-              <h3>{audience.title}</h3>
-              <span className="missionCard__subtitle">{audience.subtitle}</span>
-              <ul>
-                {audience.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-              <p className="missionCard__description">{audience.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="skills" id="skills">
-        <div className="sectionHeading">
-          <h2>Skills That Actually Matter</h2>
-          <p>Not just using tools, but understanding systems</p>
-        </div>
-        <div className="skills__grid">
-          {skills.map((skill) => (
-            <div className="skillsCard" key={skill.title}>
-              <h3>{skill.title}</h3>
-              <p>{skill.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="assessment" id="assessment">
-        <div className="assessment__badge">Currently Piloting</div>
-        <div className="assessment__card">
-          <h2>Assessment &amp; Infrastructure Tools</h2>
-          <p>
-            We&apos;re piloting custom assessment solutions that measure what
-            actually matters – not just if someone can write prompts, but if
-            they can implement without burning resources. Our tools help
-            organizations understand their real readiness for agentic workflows.
-          </p>
-          <p>
-            Working with leading organizations to develop metrics and
-            infrastructure that bridge the gap between capability assessment and
-            actual implementation success.
-          </p>
-        </div>
-      </section>
-
-      <section className="programs" id="programs">
-        <div className="sectionHeading">
-          <h2>Workshops &amp; Programs</h2>
-          <p>From executive briefings to intensive skill-building</p>
-        </div>
-        <div className="programs__grid">
-          {programs.map((program) => (
-            <div className="programCard" key={program.title}>
-              <h3>{program.title}</h3>
-              <span className="programCard__label">{program.label}</span>
-              <p>{program.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="approach" id="approach">
-        <div className="sectionHeading">
-          <h2>Our Approach</h2>
-          <p>Bridging the gap between potential and practice</p>
-        </div>
-        <div className="approach__grid">
-          {approach.map((item, index) => (
-            <div className="approachCard" key={item.title}>
-              <span className="approachCard__index">{index + 1}</span>
+        <div className="whatWeDo__grid">
+          {whatWeDo.map((item) => (
+            <div className="whatWeDoCard" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
@@ -301,121 +142,128 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="partners" id="partners">
-        <div className="sectionHeading">
-          <h2>Who We Work With</h2>
-          <p>Organizations committed to building real competencies</p>
+      <section className="reality" id="reality">
+        <SectionTag text={"The Reality"} />
+        <div className="reality__card">
+          <p>
+            Everyone&apos;s teaching prompt engineering, but that misses the
+            harder problem entirely.
+          </p>
+          <p>
+            The real challenge is understanding how multiple humans and multiple
+            AI systems collaborate. How do you know when an output is wrong?
+            When should you build versus buy versus skip AI altogether? What
+            does implementation actually cost in money, time, and organizational
+            change?
+          </p>
+          <p>
+            These are systems questions, and they require systems thinking to
+            answer.
+          </p>
+          <p>
+            We work at the intersection of three things most organizations treat
+            as separate: building technical systems, developing workforce
+            capabilities, and establishing governance. In practice, they&apos;re
+            inseparable. Implementation works when your team understands it,
+            governance works when you helped build it, and teaching works when
+            you&apos;ve actually done it yourself.
+          </p>
         </div>
-        <div className="partners__grid">
-          {partners.map((partner) => (
-            <div className="partnerCard" key={partner.title}>
-              <h3>{partner.title}</h3>
-              <p>{partner.description}</p>
+      </section>
+
+      <section className="howWeWork" id="how-we-work">
+        <SectionTag text={"How We Work"} />
+        <div className="sectionHeading">
+          <h2>Learn First. Build Right.</h2>
+        </div>
+        <div className="howWeWork__content">
+          <p>
+            We don&apos;t start by building. We start by understanding what
+            actually needs to be built.
+          </p>
+          <p>
+            Your team works with existing tools on real problems while we
+            observe where things break. Most &ldquo;AI projects&rdquo;
+            shouldn&apos;t be AI projects, and that&apos;s useful information.
+            The problems that genuinely require engineering, we engineer. The
+            result is implementation your team understands and owns.
+          </p>
+        </div>
+      </section>
+
+      <section className="whoWeWorkWith" id="who-we-work-with">
+        <SectionTag text={"Who We Work With"} />
+        <div className="sectionHeading">
+          <h2>Organizations navigating real implementation</h2>
+        </div>
+        <div className="whoWeWorkWith__grid">
+          {whoWeWorkWith.map((item) => (
+            <div className="whoWeWorkWithCard" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
             </div>
           ))}
         </div>
-        <blockquote className="partners__quote">
-          &ldquo;The future isn&apos;t about humans versus AI, or even humans
-          with AI. It&apos;s about understanding how multiple humans and
-          multiple AI systems collaborate to create value. That&apos;s what we
-          teach.&rdquo;
-        </blockquote>
       </section>
 
-      <section className="team" id="team">
-        <SectionTag text={"Meet our team"} />
-        <div className="team__cards">
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/jake.jpg"
-              alt="Jake"
-              width={200}
-              height={200}
-            />
-            <h3>Jake</h3>
-            <p>The Ceo</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/david.jpg"
-              alt="David"
-              width={200}
-              height={200}
-            />
-            <h3>David</h3>
-            <p>The CTO</p>
-          </div>
-
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/nick.jpeg"
-              alt="Nick"
-              width={200}
-              height={200}
-            />
-            <h3>Nick</h3>
-            <p>The COO</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/kay.png"
-              alt="Kay"
-              width={200}
-              height={200}
-            />
-            <h3>Kay</h3>
-            <p>Frontend Lead</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/matthew.png"
-              alt="Matthew"
-              width={200}
-              height={200}
-            />
-            <h3>matthew</h3>
-            <p>CRO</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/kaleb.png"
-              alt="Kaleb"
-              width={200}
-              height={200}
-            />
-            <h3>Kaleb</h3>
-            <p>Business Development</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/paul.jpg"
-              alt="Paul"
-              width={200}
-              height={200}
-            />
-            <h3>Paul</h3>
-            <p>The COO</p>
-          </div>
-          <div className="teamCard">
-            <Image
-              src="/assets/team-pfp/claire.png"
-              alt="Claire"
-              width={200}
-              height={200}
-            />
-            <h3>Claire</h3>
-            <p>EA</p>
-          </div>
+      <section className="currentWork" id="current-work">
+        <SectionTag text={"Current Work"} />
+        <div className="sectionHeading">
+          <h2>What we&apos;re building and teaching</h2>
+        </div>
+        <div className="currentWork__content">
+          <p>
+            We&apos;re building compliance systems for complex regulatory
+            environments and training technical teams at companies like KPMG,
+            Colgate-Palmolive, and Pacific Life. We&apos;re also piloting
+            assessment tools that measure implementation readiness, looking at
+            whether teams can actually ship without burning resources rather
+            than just whether they can write prompts.
+          </p>
+          <p>
+            We work with universities to develop curriculum that matches what
+            employers actually need, and we run skill bridge programs that build
+            capabilities lasting beyond the current technology cycle.
+          </p>
         </div>
       </section>
 
+      <section className="engagements" id="engagements">
+        <SectionTag text={"Workshops & Engagements"} />
+        <div className="sectionHeading">
+          <h2>From briefings to implementation</h2>
+        </div>
+        <div className="engagements__grid">
+          {engagements.map((engagement) => (
+            <div className="engagementCard" key={engagement.title}>
+              <h3>{engagement.title}</h3>
+              <span className="engagementCard__label">{engagement.label}</span>
+              <p>{engagement.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="perspective" id="perspective">
+        <SectionTag text={"The Perspective"} />
+        <blockquote className="perspective__quote">
+          &ldquo;The future isn&apos;t about humans versus AI, or even humans
+          with AI. It&apos;s about understanding how multiple humans and
+          multiple AI systems collaborate to create value.&rdquo;
+        </blockquote>
+        <p className="perspective__followup">
+          In a world where answers are cheap, questions become valuable. We
+          teach people to ask better questions about what to build, when to
+          build it, and whether to build it at all.
+        </p>
+      </section>
+
       <section className="ctaSection" id="contact">
+        <SectionTag text={"Start a Conversation"} />
         <div className="ctaSection__content">
-          <h2>Ready to Build Real Competencies?</h2>
+          <h2>Let&apos;s talk</h2>
           <p>
-            Whether you&apos;re preparing students for tomorrow&apos;s workforce
-            or transforming today&apos;s employees, let&apos;s discuss how we
-            can help.
+            Email: <a href="mailto:theceo@eduba.io">theceo@eduba.io</a>
           </p>
           <a
             className="ctaSection__button"
@@ -423,7 +271,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Start the Conversation
+            Book a Call
           </a>
         </div>
       </section>
@@ -527,7 +375,7 @@ export default function Home() {
               </a>
               <a
                 className="footer__left-socials__email"
-                href="mailto:contact@eduba.io"
+                href="mailto:theceo@eduba.io"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -548,13 +396,10 @@ export default function Home() {
             </div>
           </div>
           <div className="footer__left-bottom">
-            &copy; 2025 EDUBA &ndash; The faces of interfaces
+            EDUBA · The faces of interface
+            <br />
+            &copy; 2025 Eduba
           </div>
-        </div>
-        <div className="footer__right">
-          <b>For Inquiries:</b> <br /> Have questions, ideas, or feedback?
-          We&apos;d love to hear from you. Reach us at: <br />{" "}
-          <a href="mailto:contact@eduba.io">contact@eduba.io</a>
         </div>
       </section>
     </main>

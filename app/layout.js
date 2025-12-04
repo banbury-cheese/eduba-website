@@ -2,7 +2,7 @@ import "./global.scss";
 
 export const metadata = {
   title: "Eduba",
-  description: "The faces of interfaces",
+  // description: "The faces of interfaces",
 };
 
 export default function RootLayout({ children }) {
